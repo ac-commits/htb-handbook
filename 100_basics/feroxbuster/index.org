@@ -1,0 +1,18 @@
+#+title: Index
+* background
+
+** What the heck is a ferox anyway?
+Ferox is short for Ferric Oxide. Ferric Oxide, simply put, is rust. The name rustbuster was taken, so I decided on a variation. 🤷
+
+** install
+
+#+begin_src bash
+sudo apt update && sudo apt install feroxbuster
+#+end_src
+
+
+
+* Examples
+#+begin_src bash
+feroxbuster -u http://$URL -e -L 4 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -E --dont-scan '/(icons|assets|server-status|wp-content|wp-includes|wp-admin|js|css|bootstrap)/?' -o feroxbuster.log.plain
+#+end_src

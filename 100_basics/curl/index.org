@@ -1,0 +1,16 @@
+#+title: Index
+* Background
+=curl= is a tool for transferring data *from* or *to* a server using URL's.
+
+Protocols supported:
+#+begin_src bash
+DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET, TFTP, WS and WSS
+#+end_src
+* Examples
+#+begin_src bash
+
+curl -X POST http://DOMAIN \
+  -H "Content-Type: text/html" \
+  -d '{"username":"bbq@bbq.nl","password":"bbq321"}'
+
+#+end_src

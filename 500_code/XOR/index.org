@@ -1,0 +1,23 @@
+#+title: Index
+* background
+=XOR=, or exclusive or, is a logical operation that outputs true only when the inputs differ; that is, one input is true and the other is false. It is commonly used in computer science and digital circuits for operations like addition without carry.
+
+#+begin_src bash
+1 XOR 1 = 0
+1 XOR 0 = 1
+0 XOR 1 = 1
+0 XOR 0 = 0
+#+end_src
+
+
+
+
+* examples
+The script is usefull when a =hex= and a =string= are used:
+#+begin_src python
+#!/usr/bin/env python
+key = bytes.fromhex("17 55 33 38 07 32 3a 13  49 2c 44 5d")
+track = b"Halloween Be Thy Name"
+
+print("".join(chr(a ^ b) for a, b in zip(track, key)))
+#+end_src
