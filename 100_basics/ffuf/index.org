@@ -1,0 +1,35 @@
+#+title: Index
+* Background
+=ffuf= *Fuzz Faster U Fool* written in =Go=.
+
+* intall
+#+begin_src bash
+cd \
+sudo apt update && sudo apt install golang-go \
+git clone https://github.com/ffuf/ffuf && cd ffuf && go get && go build \
+mv ffuf ../.local/bin/
+
+
+#+end_src
+
+* Examples
+
+** subdomain
+
+For fuzzing a =subdomain= we encouter sometimes a subdomain and add this to our hosts file.
+
+#+begin_src bash
+ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/combined_subdomains.txt -u http://$URL/ -H 'Host: FUZZ.$URL' -mc
+
+#+end_src
+
+** pages
+
+#+begin_src bash
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt:FUFF -u http://$URL/FUFF -ic -t 100
+#+end_src
+
+- =-w= =wordlist=,
+- =-u= target =URL=,
+- =-ic= ignores wordlist comments,
+- =-t 100= Specifies threads for concurrent requests  

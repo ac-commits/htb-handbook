@@ -9,7 +9,7 @@ DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, M
 * Examples
 #+begin_src bash
 
-curl -X POST http://DOMAIN \
+curl -X POST http://$URL \
   -H "Content-Type: text/html" \
   -d '{"username":"bbq@bbq.nl","password":"bbq321"}'
 
