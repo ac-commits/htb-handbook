@@ -1,6 +1,14 @@
 #+title: Index
+#+bibliography: /home/alex/stack/bib/cyber_security.bib
+#+cite_export: basic author-year author
+
 * Background
 =ffuf= *Fuzz Faster U Fool* written in =Go=.
+
+
+* Introduction
+Fuzzing is the process or technique of sending a number of request to as target site in a certain interval of time. In other words, it is also similar to bruteforcing. Fuzzing is a process which can be achieved using tools like Wfuzz, ffuf, and so on. As a tester you would need to provide the tool with the target URL, parameter, endpoint, etc, and some sort of inputs. Then the fuzzing tool crafts requests and sends them to the target. After the fuzzing has finished, the responses, timing, status codes, and other characteristics need to be analyzed for potential vulnerabilities.
+
 
 * intall
 #+begin_src bash
@@ -11,6 +19,8 @@ mv ffuf ../.local/bin/
 
 
 #+end_src
+
+#+RESULTS:
 
 * Examples
 

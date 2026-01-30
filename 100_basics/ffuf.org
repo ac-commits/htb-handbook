@@ -1,4 +1,4 @@
-#+title: Index
+#+title: Fuff
 * Background
 =ffuf= *Fuzz Faster U Fool* written in =Go=.
 
@@ -35,3 +35,9 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-m
 - =-u= target =URL=,
 - =-ic= ignores wordlist comments,
 - =-t 100= Specifies threads for concurrent requests  
+
+
+** parameters
+#+begin_src bash
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt -u http://$URL/show_image?FUZZ=1
+#+end_src
