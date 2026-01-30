@@ -28,7 +28,7 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/combined_subdomains.txt -u h
 ** pages
 
 #+begin_src bash
-ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt:FUFF -u http://$URL/FUFF -ic -t 100
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt:FUFF -u http://$URL/FUZZ -ic -t 100
 #+end_src
 
 - =-w= =wordlist=,
